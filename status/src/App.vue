@@ -1,25 +1,28 @@
 <template>
-  <inProgress />
+  <div class="home">
+    <router-link to="/resolved"> Resolved </router-link> |
+    <router-link to="/progress"> Progress </router-link> |
+    <router-link to="/pending"> Pending </router-link> 
+  </div>
+  <router-view></router-view>
 </template>
 
 <script>
-import  inProgress from './components/inProgress.vue'
 
 export default {
   name: 'App',
   components: {
-    inProgress
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+.home {
+  margin-left: 300px;
 }
 </style>
